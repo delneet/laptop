@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+
+
+sh "install/laptop" 2>&1 | tee ~/laptop.log
+source "install/macos-defaults"
