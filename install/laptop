@@ -60,10 +60,10 @@ cask "spotify"
 cask "whatsapp"
 EOF
 
-if ! asdf plugin-list | grep -Fq "ruby"; then
-  asdf plugin-add "ruby"
+if ! asdf plugin list | grep -Fq "ruby"; then
+  asdf plugin add "ruby"
 else
-  asdf plugin-update "ruby"
+  asdf plugin update "ruby"
 fi
 
 asdf install "ruby" "2.7.6"
