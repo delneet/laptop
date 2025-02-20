@@ -60,16 +60,14 @@ cask "spotify"
 cask "whatsapp"
 EOF
 
-
-. "$(brew --prefix asdf)/libexec/asdf.sh"
 if ! asdf plugin-list | grep -Fq "ruby"; then
   asdf plugin-add "ruby"
 else
   asdf plugin-update "ruby"
 fi
 
-asdf install "$language" "ruby"
-    asdf global "$language" "ruby"
+asdf install "ruby" "2.7.6"
+asdf global  "ruby" "2.7.6"
 gem update --system
 number_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_cores - 1))
