@@ -25,9 +25,9 @@ brew "colima"
 brew "coreutils"
 brew "direnv"
 brew "docker"
-brew "docker-complete"
+brew "docker-completion"
 brew "docker-compose"
-brew "exa"
+brew "eza"
 brew "fzf"
 brew "git"
 brew "gnupg" # asdf-nodejs dependency
@@ -44,7 +44,7 @@ brew "tmux"
 brew "tree"
 brew "wget"
 
-cask "aerospace"
+cask "nikitabobko/tap/aerospace"
 cask "alacritty"
 cask "alfred"
 cask "font-fira-code-nerd-font"
@@ -75,3 +75,6 @@ number_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_cores - 1))
 
 gem install bundler
+
+## Kitty terminal
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin

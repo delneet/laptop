@@ -3,4 +3,4 @@
 
 
 sh "install/laptop" 2>&1 | tee ~/laptop.log
-source "install/macos-defaults"
+source "install/osx-settings"
